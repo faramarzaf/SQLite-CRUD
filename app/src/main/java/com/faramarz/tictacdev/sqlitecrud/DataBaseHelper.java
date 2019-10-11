@@ -14,7 +14,8 @@ public class DataBaseHelper extends SQLiteOpenHelper {
     public static final String COL2 = "NAME";
     public static final String COL3 = "FAMILY";
     public static final String COL4 = "AGE";
-
+    public SQLiteOpenHelper sqLiteOpenHelper;
+    public SQLiteDatabase database;
 
     public DataBaseHelper(Context context) {
         super(context, DATABASE_NAME, null, 1);
@@ -76,5 +77,10 @@ public class DataBaseHelper extends SQLiteOpenHelper {
         return db.delete(TABLE_NAME, "ID=?", new String[]{id});
     }
 
-
+    public void deleteAll() {
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.delete(TABLE_NAME, null, null);
+        db.execSQL("delete from " + TABLE_NAME);
+        db.close();
+    }
 }

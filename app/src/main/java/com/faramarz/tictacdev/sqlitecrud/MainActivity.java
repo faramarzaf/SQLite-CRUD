@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
 
     EditText edtID, edtName, edtFamily, edtAge;
-    Button btnDelete, btnUpdate, btnShowData, btnSaveData;
+    Button btnDelete, btnUpdate, btnShowData, btnSaveData,btnDeleteAll;
     DataBaseHelper myDb;
 
     @Override
@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         myDb = new DataBaseHelper(this);
         bind();
         btnDelete.setOnClickListener(this);
+        btnDeleteAll.setOnClickListener(this);
         btnUpdate.setOnClickListener(this);
         btnShowData.setOnClickListener(this);
         btnSaveData.setOnClickListener(this);
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         edtFamily = findViewById(R.id.edtFamily);
         edtAge = findViewById(R.id.edtAge);
         btnDelete = findViewById(R.id.btnDelete);
+        btnDeleteAll= findViewById(R.id.btnDeleteAll);
         btnUpdate = findViewById(R.id.btnUpdate);
         btnShowData = findViewById(R.id.btnShowData);
         btnSaveData = findViewById(R.id.btnSaveData);
@@ -93,6 +95,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (isInsert == true) {
                     Toast.makeText(MainActivity.this, "Data saved", Toast.LENGTH_SHORT).show();
                     edtAge.setText("");
+                    edtID.setText("");
                     edtFamily.setText("");
                     edtName.setText("");
                 } else {
@@ -117,6 +120,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     Toast.makeText(MainActivity.this, "delete failed", Toast.LENGTH_SHORT).show();
 
                 }
+                break;
+
+            case R.id.btnDeleteAll:
+               myDb.deleteAll();
+                Toast.makeText(this, "All data has been removed", Toast.LENGTH_SHORT).show();
                 break;
 
             default:
