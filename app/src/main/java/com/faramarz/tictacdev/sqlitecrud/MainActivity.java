@@ -44,7 +44,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void viewAllData() {
         Cursor res = myDb.getAllData();
         if (res.getCount() == 0) {
-            showMessage("Error", "Noting found");
+            showMessage("Empty", "Noting found");
             return;
         }
         StringBuffer stringBuffer = new StringBuffer();
@@ -91,12 +91,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         edtFamily.getText().toString(),
                         edtAge.getText().toString());
                 if (isInsert == true) {
-                    Toast.makeText(MainActivity.this, "داده ذخیره شد", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Data saved", Toast.LENGTH_SHORT).show();
                     edtAge.setText("");
                     edtFamily.setText("");
                     edtName.setText("");
                 } else {
-                    Toast.makeText(MainActivity.this, "داده ذخیره نشد", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Saving data failed :(", Toast.LENGTH_SHORT).show();
                 }
                 break;
 

@@ -9,109 +9,55 @@
 
     >
 
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:layout_margin="5dp"
+        >
 
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="id"
-            android:textColor="#000"
-            android:textSize="22sp"
-
-            />
 
         <EditText
             android:id="@+id/edtID"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="name "
-            android:textColor="#000"
-            android:textSize="22sp"
-
+            android:layout_weight="1"
+            android:hint="ID"
+            android:inputType="number"
             />
+
 
         <EditText
             android:id="@+id/edtName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
+            android:layout_weight="1"
+            android:hint="Name..." />
 
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="family "
-            android:textColor="#000"
-            android:textSize="22sp"
-
-            />
 
         <EditText
             android:id="@+id/edtFamily"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
-
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="number"
-            android:text="age"
-            android:textColor="#000"
-            android:textSize="22sp" />
+            android:layout_weight="1"
+            android:hint="Family..." />
 
 
         <EditText
             android:id="@+id/edtAge"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1" />
-
+            android:layout_weight="1"
+            android:hint="Age..."
+            android:inputType="number"
+            />
 
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:gravity="center"
         android:orientation="horizontal"
 
@@ -119,35 +65,39 @@
 
         <Button
             android:id="@+id/btnDelete"
+            style="@style/Theme.AppCompat.Light"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="delete"
-
-            />
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_btns"
+            android:text="Delete By Id" />
 
         <Button
             android:id="@+id/btnUpdate"
+            style="@style/Theme.AppCompat.Light"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="update"
-
-            />
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_btns"
+            android:text="Update By Id" />
 
         <Button
             android:id="@+id/btnShowData"
+            style="@style/Theme.AppCompat.Light"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="show info"
-
-            />
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_btns"
+            android:text="Show data" />
 
         <Button
             android:id="@+id/btnSaveData"
+            style="@style/Theme.AppCompat.Light"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="save"
-
-            />
+            android:layout_margin="5dp"
+            android:background="@drawable/bg_btns"
+            android:text="Save" />
 
 
     </LinearLayout>
